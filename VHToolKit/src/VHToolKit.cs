@@ -9,9 +9,9 @@ namespace VHToolKit
     [HarmonyPatch]
     public class VHToolKit : BaseUnityPlugin
     {
-        public const string GUID = "net.pedrobraga.vhtoolkit";
+        public const string GUID = "com.github.valheimmods.pedrobraga.vhtoolkit";
         public const string NAME = "VHToolKit";
-        public const string VERSION = "1.1.0";
+        public const string VERSION = "1.2.0";
         void Awake()
         {   
             Logger.LogInfo("Starting VHToolKit");
@@ -26,7 +26,6 @@ namespace VHToolKit
         {
             return false;
         }
-
 
     }
 }
