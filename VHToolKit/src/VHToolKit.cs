@@ -12,9 +12,11 @@ namespace VHToolKit
         public const string GUID = "com.github.valheimmods.pedrobraga.vhtoolkit";
         public const string NAME = "VHToolKit";
         public const string VERSION = "0.2.0";
+
         void Awake()
         {   
             Logger.LogInfo("Starting VHToolKit");
+            Settings.Init(Config);
 
             var harmony = new Harmony(GUID);
             harmony.PatchAll();
@@ -24,7 +26,9 @@ namespace VHToolKit
         [HarmonyPatch(typeof(Player), "UseStamina")]
         static bool Player_UseStamina_PrefixPatch(ref Player __instance)
         {
-            return false;
+            if (Settings.ToolKit.Enabled.Value && Settings.ToolKit.InfiniteStamina.Value)
+                return false;
+            return true;
         }
 
     }
