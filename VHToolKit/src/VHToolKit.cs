@@ -12,7 +12,7 @@ namespace VHToolKit
     {
         public const string GUID = "com.github.pedrobraga.vhtoolkit";
         public const string NAME = "VHToolKit";
-        public const string VERSION = "0.4.1";
+        public const string VERSION = "0.4.2";
 
         void Awake()
         {   
