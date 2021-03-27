@@ -14,6 +14,8 @@ namespace VHToolKit
             public static ConfigEntry<bool> InfiniteStamina { get; private set; } 
             public static ConfigEntry<bool> NotEncumbered { get; private set; }
             public static ConfigEntry<bool> PreserveSkills { get; private set; }
+            public static ConfigEntry<bool> WaterWalker { get; set; }
+            public static ConfigEntry<string> VHToolkit_Hotkey { get; set; }
 
             public static void Init(ConfigFile config)
             {
@@ -22,6 +24,8 @@ namespace VHToolKit
                 InfiniteStamina = config.Bind(name, "InfiniteStamina", true, "Inifinite Stamina");
                 NotEncumbered = config.Bind(name, "NotEncumbered", true, "Never Encumbered");
                 PreserveSkills = config.Bind(name, "PreserveSkills", true, "Preserve skills after death");
+                WaterWalker = config.Bind(name, "WaterWalk", true, "Walking on water");
+                VHToolkit_Hotkey = config.Bind(name, "VHToolkit_Hotkey", "F4", "VHToolkit hotkey");
             }
         }
     }
